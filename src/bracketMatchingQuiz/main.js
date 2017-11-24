@@ -4,13 +4,13 @@ process.stdin.setEncoding('utf-8');
 var input = '';
 var left_brackets = ['(','[','{'];
 var right_brackets = [')',']','}'];
-var readLine = readline.createInterface({input: process.stdin, output: process.stdout});
+var rl = readline.createInterface({input: process.stdin, output: process.stdout});
 
-readLine.on('line', function(chunk) {
+rl.on('line', function(chunk) {
 	input += chunk;
 });
 
-readLine.on('SIGINT', function() {
+rl.on('SIGINT', function() {
 	var result = true;
 	var arr = input.split("\n");
 
