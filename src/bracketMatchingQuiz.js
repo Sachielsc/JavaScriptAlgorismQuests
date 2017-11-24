@@ -34,7 +34,7 @@ rl.on('SIGINT', function() {
 					var last_idx = blanket_array.length - 1;
 
 					if (blanket_array[last_idx] === left_brackets[idx]) {
-						blanket_array.split(last_idx, 1);
+						blanket_array.splice(last_idx, 1);
 					}
 
 					else {
