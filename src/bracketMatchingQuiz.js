@@ -30,10 +30,10 @@ rl.on('SIGINT', function() {
 			}
 			else {
 				if (right_brackets.indexOf(char_array[j]) >= 0) {
-					var idx = right_brackets.indexOf(char_array[j]);
+					var bracket_type = right_brackets.indexOf(char_array[j]);
 					var last_idx = blanket_array.length - 1;
 
-					if (blanket_array[last_idx] === left_brackets[idx]) {
+					if (blanket_array[last_idx] === left_brackets[bracket_type]) {
 						blanket_array.splice(last_idx, 1);
 					}
 
