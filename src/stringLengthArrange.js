@@ -1,15 +1,15 @@
 var readline = require('readline');
 process.stdin.setEncoding('utf-8');
 
-var stdin = '';
+var input = '';
 var rl = readline.createInterface({input: process.stdin, output: process.stdout});
 
 rl.on('line', function(chunk) {
-    stdin += chunk;
+    input += chunk;
 });
 
 rl.on('SIGINT', function() {
-	var lines = stdin.split('\n');
+	var lines = input.split('\n');
 
 	var numOfArray = lines[0];
 	var datas = [];

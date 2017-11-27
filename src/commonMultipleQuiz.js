@@ -1,14 +1,13 @@
-var readline = require('readline');
+process.stdin.resume();
+// var readline = require('readline');
 process.stdin.setEncoding('utf-8');
 
 var stdin = '';
-var rl = readline.createInterface({input: process.stdin, output: process.stdout});
+// var rl = readline.createInterface({input: process.stdin, output: process.stdout});
 
-rl.on('line', function(chunk) {
+process.stdin.on('data', function (chunk) {
     stdin += chunk;
-});
-
-rl.on('SIGINT', function() {
+}).on('end', function() {
     var lines = stdin.split('\n');
     for(var i=0; i<lines.length; i++) {
         var nums = lines[i].split(' ');
