@@ -9,24 +9,24 @@ rl.on('line', function(chunk) {
 });
 
 rl.on('SIGINT', function() {
-	var lines = input.split('\n');
+    var lines = input.split('\n');
 
-	var numOfArray = lines[0];
-	var datas = [];
+    var numOfArray = lines[0];
+    var datas = [];
 
-	for (var i = 1; i < lines.length -1; i++) {
-		var newline = lines[i].replace(/\s+$/, '');
-		if (newline.length > 0) {
-			datas.push(newline);
-		}
-	}
+    for (var i = 1; i < lines.length -1; i++) {
+        var newline = lines[i].replace(/\s+$/, '');
+        if (newline.length > 0) {
+            datas.push(newline);
+        }
+    }
 
-	datas.sort(function(a, b){
-		return b.length - a.length;
-	});
+    datas.sort(function(a, b){
+        return b.length - a.length;
+    });
 
-	for (var i = 0; i < numOfArray; i++) {
-		process.stdout.write(datas[i].toString());
-		process.stdout.write('\n');
-	}
+    for (var i = 0; i < numOfArray; i++) {
+        process.stdout.write(datas[i].toString());
+        process.stdout.write('\n');
+    }
 });
